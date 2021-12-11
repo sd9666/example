@@ -1,0 +1,128 @@
+.section-register{
+    height: 100vh;
+    position:relative;
+    color: white;
+    font-size: 3rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    @include mediaQuery(phone7){
+        width: 100%;
+    }
+    .register{
+    
+        &__form{
+        @include centerelements;
+        background-color: rgba(255, 255, 255, 0.493);
+        width: 30rem;
+        height: 47rem;
+            &-heading{
+                text-align: center;
+            }
+            box-shadow:0 2rem 3rem rgb(14, 14, 12);
+            background-image: linear-gradient(to bottom,rgb(139, 130, 209), rgba(204, 95, 95, 0.13));
+            
+
+           
+          
+        &-logo{
+            position: absolute;
+            top:0rem;
+            left: 5%;
+            width: 6rem;
+            height: 6rem;
+            background-color: white;
+            border-radius: 6rem;
+            left:40%;
+            top:5rem;
+            i{
+                font-size: 3rem;
+                color:blue;
+                text-align: center;
+                position: absolute;
+                @include centerelements;
+               
+            }
+        }
+        &__group{
+            top:6rem;
+            position: relative;
+            padding: 1.2rem;
+
+        }
+    &__input{
+
+        font-size: 1.5rem;
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid rgb(255, 255, 255);
+        display: block;
+        padding:0;
+        outline: none;
+        &:focus{
+            border-bottom: 3px solid blue;
+        }
+        &:focus:invalid{
+            border-bottom: 3px solid red;
+        }
+
+   
+    }    
+    &__label{
+        font-size:1.3rem;
+        color:rgb(255, 255, 255);
+        left:5%;
+        margin-top: 0.4rem;
+        display: block;
+        position: relative;
+        transition:all .2s;
+      
+    }
+    &__input:placeholder-shown + label{
+        visibility: hidden;
+        opacity: 0;
+        transform:translateX(-5rem);
+    }
+    
+    .btn-register{
+    position: absolute;
+    top: 38rem;
+    left:5rem;
+    width:20rem;
+    height: 3rem;
+    border-radius: 3rem;
+    border-color: blue;
+
+    }
+    .btn:hover{
+        cursor:pointer;
+        background-color: rgba(29, 79, 155, 0.507);
+    }
+    .already-member{
+        position: relative;
+        top: 10rem;
+        font-size: 1.8rem;
+        text-align: center;
+        .to_login{
+            color: blue;
+        }
+    }
+    }
+
+
+    }
+   
+    .register::before{
+        background-image: url('../img/johnny-mcclung-uYTKzVp8loQ-unsplash.jpg');
+        background-size: cover;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        display: block;
+        content:"";
+    }
+}

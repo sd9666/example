@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>N</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+<!-- CSS only -->
+<link rel="stylesheet" type="text/css" href="./vendors/css/bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="./vendors/google-fonts/Ephesis/Ephesis-Regular.ttf">
+<link  href="./vendors/font-awesome-4.7.0/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link
+rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+</head>
+<section class="section-login" id="section-login">
+    <div class="login">
+        <div class="login__form">
+        <form method="POST"> 
+            <div class="login__form-heading">
+                Login
+            </div>
+            <div class="login__form-logo">
+                <i class="fas fa-sign-in-alt"></i>
+            </div>
+          
+                <div class="login__form__group">
+                <input type="text" class="login__form__input" placeholder="E-mail" id="email" name="email" autocomplete="off" required></input>
+                <label for="email" class="login__form__label"><i class="far fa-envelope">Input email</i></label>
+                <div class="email-error"></div>
+                </div>
+
+                <div class="login__form__group">
+                <input type="text" class="login__form__input" placeholder="Password" id="password" name="password" autocomplete="off" required></input>
+                <label for="password" class="login__form__label"><i class="fas fa-unlock">Input password</i></label>
+                <div class="password-error"></div>
+                </div>
+
+            
+
+                <div class="register__form_group progress-bar"></div>
+
+                <div class="">
+                    <button type="submit" class="btn btn-login" id="submit-registration">Log in&rarr;</button>
+                </div>
+                <p class="already-member">No account? <a href="registration.html" class="to_register">Sign up</a></p>
+        </form>
+    </div>
+    </div>
+
+</section>
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="vendors/js/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="vendors/js/bootstrap.min.js"></script>
+<script src="js/menuClick.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+.col-md-3{
+height: 53rem;
+-webkit-perspective: 150rem;
+-moz-perspective: 150rem;
+perspective: 150rem;
+margin-bottom: 2.5rem;
+
+}
+
+
+h1{
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    color: rgb(5, 63, 58);
+}
+.advertisement{
+    margin-left:3.8%;
+    margin-right: 3.5%;
+  
+    @include mediaQuery(TabletLand13){
+        margin-left:0rem;
+        &:last-child{
+            margin-right:2rem;
+        }
+        width: 30%;
+    }
+    @include mediaQuery(smallPhone5){
+        width:100%;
+        margin-left: 4rem;
+    }
+    @include mediaQuery(phone6){
+        width:60%;
+        margin-left: 14rem;
+    }
+  
+    
+    &__side{
+        transition:all 2s ease-out;
+        position:absolute;
+        width:100%;
+        height: 53rem;
+        box-shadow:0 2rem 3rem rgb(136, 136, 110);
+        background-color:white;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        
+        &--front{
+            background-color: white;
+        }
+        &--back{
+            transform:rotateY(180deg);
+            &-1{
+            background-color: rgba(146, 45, 129, 0.445);
+            }
+            &-2{
+                background-color: rgb(184, 163, 58);
+            }
+            &-3{
+                background-color: rgb(207, 95, 95);
+            }
+        }
+    }
+    &:hover &__side--front{
+        transform:rotateY(-180deg);
+    }
+    &:hover &__side--back{
+        transform:rotateY(0deg);
+    }
+    &__picture{
+        img{
+            height: 23rem;
+            width:100%;         
+            background-size: cover;
+        }
+    }
+      &__heading{
+           font-size: 1.2rem;
+           font-weight: 400;
+           color:rgb(0, 0, 0);
+           width:100%;
+           position: relative;
+           top:-1rem;
+           text-align: center;
+           background-color:transparent;
+           font-family: 'Ephesis', cursive;
+           overflow: hidden;
+        
+       }
+     &-svgicons{
+         position: fixed;
+         width: 100%;
+         height: 3rem;
+         background-color:  rgba(146, 45, 129, 0.445);
+         top: 31rem;
+         fill: black;
+        
+       
+
+         &--hairicons{
+             margin-right: 1rem;
+             background-color: rgb(184, 163, 58);
+             .icon-middle{
+                 float:left; 
+                &:not(:last-child){
+                    margin-left: 1.5rem;
+                }
+                span{
+                    margin-top: -0.1rem;
+                
+                }
+             }
+        }
+        &--brush{
+            background-color: rgb(177, 70, 70);
+        }
+     }
+     span{
+        font-size:1.7rem;
+        position: relative;
+        top:-0.8rem;
+     }
+     svg{
+         position: relative;
+         top:-1rem;
+         width: 2rem;
+         height: 2rem;
+     }
+     svg:not(:last-child){
+         margin-left: 2rem;
+        
+     }
+
+
+     &__address{
+         top: 49rem;
+         position: fixed;
+         left:4rem;
+         span{
+         font-size: 1.5rem;
+         }
+     }
+     &-brief-desc{
+         font-size: 1.5rem;
+         top:34rem;
+         position: absolute;
+         font-family: 'Nunito', cursive;
+         margin-left: 2rem;
+         margin-right: 1rem;
+         @include mediaQuery(TabletLand13){
+             font-size: 1.3rem;
+         }
+     }
+     //Styling the back side
+     &__details{
+        padding: 5rem;   
+         ul{
+             list-style: none;
+             font-size: 1.7rem;
+             color: black;
+             width: 20rem;
+         }
+         li{
+            padding: 1rem 1.5rem;
+            text-align: center;
+         &:not(:last-child){
+             border-bottom: 1px solid rgba(0, 0, 0, 0.37);
+             
+         }
+
+         }
+     }
+     &__company-details{
+         position:absolute;
+         @include centerelements;
+         top:7rem;
+      
+     }
+     &__company, &__individual{
+         width: 100%;
+         height: 11rem;
+         font-size:1.5rem;
+         color:black;
+         &--logo{
+             height: 11rem;
+             width:12rem;
+             border-radius: 7rem;
+         }
+    
+     }
+     &__bottom-logo{
+         width: 100%;
+         height: 9.2rem;
+         position: absolute;
+         top:43.8rem;
+         
+         &-photo{
+             position: absolute;
+             width: 100%;
+             height: 35rem;
+             top:-6.5rem;
+        &--2{
+            position: absolute;
+            width: 100%;
+            height: 10rem;
+            top:6rem;
+           
+        }
+        &--3{
+            position: absolute;
+            height: 35rem;
+            width: 100%;
+            top: -7rem;
+        }
+             
+         }
+         &-bgcolorharcourts{
+             background-color: rgba(37, 8, 70, 0.493);
+
+         }
+         &-bgcolorbrad-teal{
+             background-color: rgb(110, 95, 17);
+         }
+         &-bgcolorbarryplant{
+            background-color: rgb(129, 31, 31);
+        }
+        &-bgcoloriconek{
+            background-color: $color-iconek;
+        }
+
+     }
+     &__dollar{
+         font-weight: 700;
+         color: rgb(174, 0, 255);
+         font-size: 14rem;
+         text-shadow: 2px 3px 4px rgb(8, 7, 68);
+         &--2{
+            color: rgb(196, 164, 8)
+            
+         }
+     }
+     &__cta{
+         position: relative;
+         top:-3rem;
+         font-size: 1.9rem;
+     }
+     &__price-value{
+        position: relative;
+         margin-left: 3rem;
+         top:0.8rem;
+     }
+     .btn-text{
+         float: right;
+         margin-right: 3rem;
+         color:black;
+         font-size: 1.7rem;
+     }
+
+
+}

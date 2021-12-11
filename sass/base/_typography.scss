@@ -1,0 +1,29 @@
+.primary-heading{
+    &--front{
+        display: block;
+        font-weight: 300;
+        font-size: 50px;
+        color: $color-grey-light-2;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        @include mediaQuery(tabletPort7){
+            font-weight: 200;
+            font-size: 30px;
+        }
+    }
+    &--small{
+        display: block;
+        font-weight: 200;
+        font-size: 30px;
+        color: $color-grey-light-2;
+        @include centerelements;
+        margin-top: 2rem;
+        float:right;
+        @include mediaQuery(tabletPort7){
+            font-weight: 100;
+            font-size: 20px;
+        }
+    }
+
+   
+}

@@ -1,0 +1,23 @@
+.scroll{
+    #scrollToTopButton{
+       width: 5rem;
+       height: 5rem;
+       float: right;    
+       margin-right:7rem;
+       margin-top:5rem;
+       cursor: pointer;
+       border: none;
+       border-radius: 50%;
+       visibility: hidden;
+       opacity: 0;
+    }
+    #scrollToTopButton.show{
+        visibility: visible;
+        transform:scale(1);
+        opacity: 1;
+
+    }
+    i{
+        font-size: 3rem;
+    }
+}

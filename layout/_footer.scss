@@ -1,0 +1,96 @@
+.footer{
+    width: 100%;
+    @include a-links($color-white,$color-white,$color-white,$color-white);
+    background-color: rgba(107, 158, 167, 0.356);
+    clip-path: polygon(100% 38%, 100% 36%, 100% 100%, 0 100%, 0 18%);
+    background-image: linear-gradient(
+        to right,
+        rgb(218, 89, 138),
+        rgb(226, 115, 158),
+            rgb(134, 61, 89) 
+
+    );
+    @include mediaQuery(phone6){
+    clip-path: none;
+
+    }
+ 
+ .row [class^="col-"]{
+     margin-right: 0rem !important;
+ }
+ 
+   
+    &__logof{
+        width:100%;
+        background-image: linear-gradient(
+            to right,
+            rgb(167, 30, 83),
+            rgb(168, 45, 92),
+            rgb(134, 61, 89) 
+        );
+        
+        
+    }
+    &__logo{
+        height: 10rem;
+        width: 10rem;
+        margin-top: 10rem;
+        margin-left: 3rem;     
+
+    }
+    &__elements{
+        list-style: none;
+        margin-top:1px solid white;
+        padding-top: 2.5rem;
+    }
+    &__copyright{
+        font-size:1.7rem;
+        color:white;
+        margin-left: 32rem;
+        .fab{
+            padding-top: 1rem;
+            font-size: 2rem;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            text-align: center;
+            margin:0 auto;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+        .fa-facebook-square{
+            background:$facebook;
+        }
+        .fa-instagram{
+            background:$instagram;
+        }
+        .fa-twitter{
+            background: $twitter;
+        }
+        .fa-youtube{
+            background: $youtube;
+        }
+        
+      
+        
+    }
+    &__items{
+        display:inline-block;
+        &__shine{
+            color:white;
+            list-style: none;
+            text-decoration:none;
+            padding-right: 1rem;
+        }
+       
+    }
+    
+    &__navigation{
+        width: 100%;
+        top:3rem;
+        font-size:1.7rem;
+        border-top:1px solid white;
+        height: 7rem;
+        }
+}

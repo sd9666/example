@@ -1,0 +1,9 @@
+//$(document).ready(function(){
+//alert('Loaded');
+//});
+$(".submenu").click(function(){
+    $(this).children("ul").slideToggle();
+});
+$("ul").click(function(st){
+   st.stopPropagation();
+});

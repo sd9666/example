@@ -1,0 +1,11 @@
+.section-main{
+    background-color: white;
+}
+.container-fluid{
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    @include mediaQuery(tabletPort7){
+        margin-left: 0rem !important;
+        margin-right: 0rem !important;
+    }
+}

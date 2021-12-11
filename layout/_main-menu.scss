@@ -1,0 +1,121 @@
+.main-menu{
+    width: 100%;
+    height: 6rem;
+    background-color:#f7e1e4;
+    opacity: 0.5;
+    position: absolute; 
+
+
+    &__logo-container{
+     width: 7rem;
+     height: 7rem;
+     position: absolute;
+     left:5rem;
+   
+    }
+    &__menu-logo{
+        @include centerelements;
+        height: 6rem;
+    }
+    .menu{
+        width: 100%;
+        height: 6rem;
+        background-color: white;
+    
+    }
+    .menu a{
+      text-decoration: none;
+      display: block;
+      font-size: 2.1rem;
+      color: black;
+      padding: 1rem;
+      
+   
+}
+    .menu ul{
+        list-style: none;
+        display: flex;
+        float: right;
+        margin-right: 0rem;
+        margin-top:0.4rem;       
+       
+    }
+  
+    .menu ul ul{
+        display:none;
+        margin-top:0rem;
+        
+        
+    }
+    .menu ul ul li{
+        display: block;
+        background-color:white;
+        width: 15rem;
+        &:not(last-child){
+            border-bottom: solid 1px $primary-color-dark;
+            }
+           
+    }
+    .menu a:hover, .menu a:active{
+        color: brown;
+        background: rgba(90, 88, 202, 0.411);
+        border-bottom: solid 2px red;
+    }
+    .hidden{
+        display: none;
+    }
+    
+    .bars, .times{
+        display: none;
+    }
+    @include mediaQuery(tabletPort7){
+        .bars{
+            display: block;
+            float: right;
+            margin-right: 3rem;
+            margin-top:1rem;
+        }
+        .icon-menu{
+            float: right;
+            margin-right: 3rem;
+            margin-top:1rem;
+            cursor: pointer;
+        }
+        .menu{
+            position: absolute;
+            width: 100%;
+            margin-right:30rem;
+            z-index:1;  
+            top:6rem;
+            transform:translateX(-100%);
+            transform: all .5s ease-out;
+            background-color: white;
+          
+        }
+        .menu ul{
+            display: block; 
+            width: 100%;
+            background-color: white;
+        
+        }
+        .menu ul li li{
+            width:100%;
+           
+        }
+       
+        #btn-menu:checked ~ .menu{
+            transform:translateX(0%);
+        }
+        #btn-menu:checked ~ .icon-menu{
+            .bars{
+                display: none;
+            }
+            .times{
+                display:block;
+                float: right;
+                margin-right: 3rem;
+                margin-top:1rem;
+            }
+        }
+    }
+}
